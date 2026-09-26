@@ -500,7 +500,7 @@ Everyone who has ever tried to teach or learn neuropharmacology — this is for 
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 **Neuropolygon 4.0 is an educational simulator, not a medical device.**
 
