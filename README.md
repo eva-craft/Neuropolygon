@@ -422,7 +422,7 @@ Contributions are welcome! Whether you're a neuroscientist, pharmacologist, deve
 - 📝 Write documentation
 
 ### How to add a drug
-1. Open `neuropolygon.html`
+1. Open `index.html`
 2. Find the `DRUGS` array
 3. Add a new entry following the existing schema:
    ```javascript
