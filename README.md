@@ -3,8 +3,10 @@
 > An interactive, browser-based sandbox for neuroscience and pharmacology education.
 > Drag neurotransmitters between neurons, trigger synaptic plasticity, prescribe drugs,
 > and watch the effects unfold in real time on EEG, ECG, and MRI.
-![Neuropolygon](img.png)
+
 ---
+
+![Neuropolygon](img.png)
 
 ## 📖 Table of Contents
 
