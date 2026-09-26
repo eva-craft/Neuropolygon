@@ -1,3 +1,5 @@
+# 🧠 Neuropolygon 4.0 — Interactive Neuropharmacology Simulator
+
 > An interactive, browser-based sandbox for neuroscience and pharmacology education.
 > Drag neurotransmitters between neurons, trigger synaptic plasticity, prescribe drugs,
 > and watch the effects unfold in real time on EEG, ECG, and MRI.
@@ -174,17 +176,20 @@ The simulation is grounded in established neuroscience and pharmacology literatu
 ---
 
 ## 🖥️ Interface Overview
+
+```
 ┌─────────────────────────────────────────────────────────────┐
-│ TOP: status bar (score, goal, mode, level) + toolbar │
+│ TOP: status bar (score, goal, mode, level) + toolbar        │
 ├───────────┬─────────────────────────────────┬───────────────┤
-│ LEFT: │ CENTER: simulation canvas │ RIGHT: │
-│ Drug │ + E/I balance bar │ Monitoring │
-│ library │ + ATP bar │ panel 4.0 │
-│ (200px) │ + cortisol bar │ (340px) │
-│ │ + 7 real-time graphs │ │
+│ LEFT:     │ CENTER: simulation canvas       │ RIGHT:        │
+│ Drug      │ + E/I balance bar               │ Monitoring    │
+│ library   │ + ATP bar                       │ panel 4.0     │
+│ (200px)   │ + cortisol bar                  │ (340px)       │
+│           │ + 7 real-time graphs            │               │
 ├───────────┴─────────────────────────────────┴───────────────┤
-│ BOTTOM: hint bar │
+│ BOTTOM: hint bar                                            │
 └─────────────────────────────────────────────────────────────┘
+```
 
 ### Monitoring Panel Tabs
 1. **🧠 Physiology** — LIF, STDP, diffusion, second messengers, oscillations
@@ -340,49 +345,52 @@ The MRI viewer supports axial, coronal, sagittal, and multiplanar slice modes.
 ---
 
 ## 🏗️ Architecture
+
+```
 ┌─────────────────────────────────────────────────────────────┐
-│ index.html │
+│ index.html                                                  │
 ├─────────────────────────────────────────────────────────────┤
-│ <style> — UI, panels, tooltips, themes, adaptive layout │
+│ <style>    — UI, panels, tooltips, themes, adaptive layout  │
 ├─────────────────────────────────────────────────────────────┤
-│ <body> — canvas, panels, modals, buttons │
+│ <body>     — canvas, panels, modals, buttons                │
 ├─────────────────────────────────────────────────────────────┤
-│ <script> │
-│ ├── DOM refs & state │
-│ ├── Localization (RU/EN) │
-│ ├── Receptor & neurotransmitter data │
-│ ├── Drug library (40+ entries) │
-│ ├── Pathology modes │
-│ ├── Achievements system │
-│ ├── Background & rendering helpers │
-│ ├── Node/edge/portal generation │
-│ ├── Physics modules: │
-│ │ ├── LIF neuron model │
-│ │ ├── STDP plasticity │
-│ │ ├── Diffusion field │
-│ │ ├── Second messengers │
-│ │ ├── Kuramoto oscillations │
-│ │ ├── PBPK pharmacokinetics │
-│ │ ├── Drug interactions │
-│ │ ├── Side effects │
-│ │ ├── Tolerance & withdrawal │
-│ │ └── Genetics (CYP2D6) │
-│ ├── Clinical modules: │
-│ │ ├── Virtual patients │
-│ │ ├── Differential diagnosis │
-│ │ ├── EEG viewer │
-│ │ ├── ECG viewer │
-│ │ └── MRI viewer (NiiVue + overlay) │
-│ ├── Input handling (mouse, touch, keyboard) │
-│ ├── Rendering (nodes, edges, particles, UI) │
-│ ├── Graphs (oscilloscope, histogram, PK, EEG, heatmap) │
-│ ├── Main loop (requestAnimationFrame) │
-│ └── UI wiring (buttons, modals, tabs) │
+│ <script>                                                    │
+│   ├── DOM refs & state                                      │
+│   ├── Localization (RU/EN)                                  │
+│   ├── Receptor & neurotransmitter data                      │
+│   ├── Drug library (40+ entries)                            │
+│   ├── Pathology modes                                       │
+│   ├── Achievements system                                   │
+│   ├── Background & rendering helpers                        │
+│   ├── Node/edge/portal generation                           │
+│   ├── Physics modules:                                      │
+│   │   ├── LIF neuron model                                  │
+│   │   ├── STDP plasticity                                   │
+│   │   ├── Diffusion field                                   │
+│   │   ├── Second messengers                                 │
+│   │   ├── Kuramoto oscillations                             │
+│   │   ├── PBPK pharmacokinetics                             │
+│   │   ├── Drug interactions                                 │
+│   │   ├── Side effects                                      │
+│   │   ├── Tolerance & withdrawal                            │
+│   │   └── Genetics (CYP2D6)                                 │
+│   ├── Clinical modules:                                     │
+│   │   ├── Virtual patients                                  │
+│   │   ├── Differential diagnosis                            │
+│   │   ├── EEG viewer                                        │
+│   │   ├── ECG viewer                                        │
+│   │   └── MRI viewer (NiiVue + overlay)                     │
+│   ├── Input handling (mouse, touch, keyboard)               │
+│   ├── Rendering (nodes, edges, particles, UI)               │
+│   ├── Graphs (oscilloscope, histogram, PK, EEG, heatmap)    │
+│   ├── Main loop (requestAnimationFrame)                     │
+│   └── UI wiring (buttons, modals, tabs)                     │
 └─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-### 🗺️ Roadmap
+## 🗺️ Roadmap
 
 ### Near-term
 - [ ] Refactor into ES modules (Vite build)
@@ -424,60 +432,58 @@ Contributions are welcome! Whether you're a neuroscientist, pharmacologist, deve
 1. Open `index.html`
 2. Find the `DRUGS` array
 3. Add a new entry following the existing schema:
-   ```javascript
-   {
-     id: 'your_drug',
-     category: 'Category',
-     name: 'Drug name',
-     abbr: 'Abbr',
-     color: '#hex',
-     icon: 'X',
-     mechanism: 'Mechanism of action',
-     targets: [{ recId: 'receptor_id', action: 'block', desc: 'Description' }],
-     releaseBoost: { ntId: multiplier },
-     speedBoost: { ntId: multiplier },
-     lifeBoost: { ntId: multiplier },
-     duration: 12,
-     source: 'Reference',
-     halfLife: 18,
-     cyp: ['2D6'],
-     therapeutic: [min, max],
-   }
-Test in the browser
 
-Submit a PR
+```javascript
+{
+  id: 'your_drug',
+  category: 'Category',
+  name: 'Drug name',
+  abbr: 'Abbr',
+  color: '#hex',
+  icon: 'X',
+  mechanism: 'Mechanism of action',
+  targets: [{ recId: 'receptor_id', action: 'block', desc: 'Description' }],
+  releaseBoost: { ntId: multiplier },
+  speedBoost: { ntId: multiplier },
+  lifeBoost: { ntId: multiplier },
+  duration: 12,
+  source: 'Reference',
+  halfLife: 18,
+  cyp: ['2D6'],
+  therapeutic: [min, max],
+}
+```
 
-How to add a receptor
-Find the RECEPTORS array
+4. Test in the browser
+5. Submit a PR
 
-Add a new entry with id, nt, name, fullName, type, func, source, ki
+### How to add a receptor
+1. Find the `RECEPTORS` array
+2. Add a new entry with `id`, `nt`, `name`, `fullName`, `type`, `func`, `source`, `ki`
+3. Test in the browser
+4. Submit a PR
 
-Test in the browser
+---
 
-Submit a PR
+## 📄 License
 
-📄 License
-All Rights Reserved — No Commercial Distribution, No Modification
+**All Rights Reserved — No Commercial Distribution, No Modification**
 
 Copyright (c) 2024 Neuropolygon contributors. All rights reserved.
 
-This software and its source code are provided for personal, educational, and non-commercial use only.
+This software and its source code are provided for **personal, educational, and non-commercial use only**.
 
-You are NOT permitted to:
+**You are NOT permitted to:**
 
-❌ Use this software, in whole or in part, for any commercial purpose
+- ❌ Use this software, in whole or in part, for any **commercial purpose**
+- ❌ **Distribute**, sublicense, sell, rent, lease, or otherwise transfer this software or any derivative thereof for commercial gain
+- ❌ **Modify**, adapt, translate, reverse-engineer, decompile, disassemble, or create derivative works based on this software
+- ❌ **Redistribute** this software or any modified version without the express prior written permission of the copyright holder
 
-❌ Distribute, sublicense, sell, rent, lease, or otherwise transfer this software or any derivative thereof for commercial gain
+**You ARE permitted to:**
 
-❌ Modify, adapt, translate, reverse-engineer, decompile, disassemble, or create derivative works based on this software
-
-❌ Redistribute this software or any modified version without the express prior written permission of the copyright holder
-
-You ARE permitted to:
-
-✅ View, run, and use this software for personal, educational, and non-commercial purposes
-
-✅ Share a link to the original, unmodified source
+- ✅ View, run, and use this software for personal, educational, and non-commercial purposes
+- ✅ Share a link to the original, unmodified source
 
 Any use, copying, modification, or distribution of this software not expressly permitted above is strictly prohibited and will constitute a violation of applicable copyright law.
 
@@ -485,79 +491,86 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 For licensing inquiries, please open an issue on GitHub.
 
-⚠️ Disclaimer
-Neuropolygon 4.0 is an educational simulator, not a medical device.
+---
 
-Not Medical Advice
-The content, simulations, drug data, patient scenarios, and all other materials provided by this software are for educational and informational purposes only. They do NOT constitute medical advice, diagnosis, treatment recommendations, or professional guidance of any kind.
+## ⚠️ Disclaimer
 
-Do not use this software to:
+**Neuropolygon 4.0 is an educational simulator, not a medical device.**
 
-❌ Diagnose, treat, or manage any medical condition
+### Not Medical Advice
 
-❌ Make clinical decisions for yourself or others
+The content, simulations, drug data, patient scenarios, and all other materials provided by this software are for **educational and informational purposes only**. They do **NOT** constitute medical advice, diagnosis, treatment recommendations, or professional guidance of any kind.
 
-❌ Prescribe, adjust, or discontinue any medication
+**Do not use this software to:**
 
-❌ Replace consultation with a qualified healthcare professional
+- ❌ Diagnose, treat, or manage any medical condition
+- ❌ Make clinical decisions for yourself or others
+- ❌ Prescribe, adjust, or discontinue any medication
+- ❌ Replace consultation with a qualified healthcare professional
 
 Always seek the advice of a physician or other qualified healthcare provider with any questions regarding a medical condition or medication. Never disregard professional medical advice or delay seeking it because of something you have read or simulated in this software.
 
-Simulation Limitations
-The models implemented in Neuropolygon are simplified abstractions of extremely complex biological systems. They are intended to illustrate general principles and cannot capture the full complexity of:
+### Simulation Limitations
 
-Real neuronal networks and brain function
+The models implemented in Neuropolygon are **simplified abstractions** of extremely complex biological systems. They are intended to illustrate general principles and cannot capture the full complexity of:
 
-Individual patient variability (genetics, age, comorbidities, polypharmacy)
+- Real neuronal networks and brain function
+- Individual patient variability (genetics, age, comorbidities, polypharmacy)
+- Complete pharmacokinetics and pharmacodynamics
+- Actual drug efficacy, safety, or side effect profiles
 
-Complete pharmacokinetics and pharmacodynamics
+Numerical values (half-lives, Ki values, therapeutic windows, etc.) are approximate and drawn from published literature for teaching purposes. They may be simplified, rounded, or outdated. **Do not rely on them for clinical calculations.**
 
-Actual drug efficacy, safety, or side effect profiles
+### No Doctor–Patient Relationship
 
-Numerical values (half-lives, Ki values, therapeutic windows, etc.) are approximate and drawn from published literature for teaching purposes. They may be simplified, rounded, or outdated. Do not rely on them for clinical calculations.
+Use of this software does **not** create a doctor–patient relationship, pharmacist–patient relationship, or any other professional relationship. The authors and contributors are not acting as your healthcare providers.
 
-No Doctor–Patient Relationship
-Use of this software does not create a doctor–patient relationship, pharmacist–patient relationship, or any other professional relationship. The authors and contributors are not acting as your healthcare providers.
+### Drug Information
 
-Drug Information
-Drug names, mechanisms, targets, and interactions are presented in simplified form. Real-world prescribing requires consideration of contraindications, warnings, black box warnings, drug–drug interactions, renal/hepatic function, pregnancy/lactation status, and many other factors not modeled here. Always consult official prescribing information (e.g., FDA, EMA, or national formulary) before any clinical use.
+Drug names, mechanisms, targets, and interactions are presented in simplified form. Real-world prescribing requires consideration of contraindications, warnings, black box warnings, drug–drug interactions, renal/hepatic function, pregnancy/lactation status, and many other factors not modeled here. **Always consult official prescribing information (e.g., FDA, EMA, or national formulary) before any clinical use.**
 
-No Warranty
-The software is provided "AS IS", without warranty of any kind. The authors make no guarantees regarding accuracy, completeness, reliability, or fitness for any particular purpose. See the License section for full terms.
+### No Warranty
 
-Limitation of Liability
+The software is provided "AS IS", without warranty of any kind. The authors make no guarantees regarding accuracy, completeness, reliability, or fitness for any particular purpose. See the [License](#-license) section for full terms.
+
+### Limitation of Liability
+
 In no event shall the authors, contributors, or copyright holders be liable for any claim, damages, or other liability — whether in an action of contract, tort, or otherwise — arising from, out of, or in connection with the software or the use or other dealings in the software. This includes, without limitation, any harm arising from reliance on simulated results for real-world decisions.
 
-Emergency
-If you are experiencing a medical emergency, call your local emergency number immediately (e.g., 112 in the EU, 911 in the US, 103 in Russia). Do not rely on this software.
+### Emergency
 
-Educational Use Only
-This tool is intended for students, educators, researchers, and curious minds who wish to explore neuropharmacology concepts in a safe, interactive environment. It is not a substitute for formal training in medicine, pharmacology, or neuroscience.
+**If you are experiencing a medical emergency, call your local emergency number immediately** (e.g., 112 in the EU, 911 in the US, 103 in Russia). Do not rely on this software.
 
-By using Neuropolygon 4.0, you acknowledge that you have read, understood, and agreed to this disclaimer.
+### Educational Use Only
 
-🙏 Acknowledgments
-NiiVue — for the excellent WebGL MRI viewer
+This tool is intended for students, educators, researchers, and curious minds who wish to explore neuropharmacology concepts in a safe, interactive environment. It is **not** a substitute for formal training in medicine, pharmacology, or neuroscience.
 
-MNI152 template — the anatomical MRI data
+**By using Neuropolygon 4.0, you acknowledge that you have read, understood, and agreed to this disclaimer.**
 
-Kandel, Stahl, Lüscher, Niswender, Sieghart, Beaulieu, Fredholm, Wess, Torres, Barnes — for the scientific foundation
+---
 
-The open neuroscience community — for inspiration and feedback
+## 🙏 Acknowledgments
 
-Everyone who has ever tried to teach or learn neuropharmacology — this is for you
+- NiiVue — for the excellent WebGL MRI viewer
+- MNI152 template — the anatomical MRI data
+- Kandel, Stahl, Lüscher, Niswender, Sieghart, Beaulieu, Fredholm, Wess, Torres, Barnes — for the scientific foundation
+- The open neuroscience community — for inspiration and feedback
+- Everyone who has ever tried to teach or learn neuropharmacology — this is for you
 
-📬 Contact
-GitHub Issues — for bugs, feature requests, and scientific corrections
+---
 
-Pull Requests — for code and data contributions
+## 📬 Contact
 
-Discussions — for general questions and ideas
+- GitHub Issues — for bugs, feature requests, and scientific corrections
+- Pull Requests — for code and data contributions
+- Discussions — for general questions and ideas
+
+---
 
 ⭐ If you find this useful...
 Give it a star ⭐ on GitHub, share it with a student or colleague, and consider contributing a drug or receptor. Every addition makes the simulator more valuable for the next learner.
 
-"The brain is a world consisting of a number of unexplored continents and great stretches of unknown territory."
-— Santiago Ramón y Cajal
+> "The brain is a world consisting of a number of unexplored continents and great stretches of unknown territory."
+> — Santiago Ramón y Cajal
 
 Welcome to the territory. Explore it.
