@@ -457,7 +457,7 @@ Test in the browser
 
 Submit a PR
 
-📄 License
+## 📄 License
 All Rights Reserved — No Commercial Distribution, No Modification
 
 Copyright (c) 2024 Neuropolygon contributors. All rights reserved.
