@@ -382,7 +382,7 @@ The MRI viewer supports axial, coronal, sagittal, and multiplanar slice modes.
 
 ---
 
-## 🗺️ Roadmap
+### 🗺️ Roadmap
 
 ### Near-term
 - [ ] Refactor into ES modules (Vite build)
