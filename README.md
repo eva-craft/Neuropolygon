@@ -25,8 +25,8 @@
 - [Architecture](#-architecture)
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
-- [License](#-license)
 - [Disclaimer](#-disclaimer)
+- [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
 ---
