@@ -1,3 +1,62 @@
+---
+
+## ⚠️ Disclaimer
+
+**Neuropolygon 4.0 is an educational simulator, not a medical device.**
+
+### Not Medical Advice
+
+The content, simulations, drug data, patient scenarios, and all other materials provided by this software are for **educational and informational purposes only**. They do **NOT** constitute medical advice, diagnosis, treatment recommendations, or professional guidance of any kind.
+
+**Do not use this software to:**
+
+- ❌ Diagnose, treat, or manage any medical condition
+- ❌ Make clinical decisions for yourself or others
+- ❌ Prescribe, adjust, or discontinue any medication
+- ❌ Replace consultation with a qualified healthcare professional
+
+Always seek the advice of a physician or other qualified healthcare provider with any questions regarding a medical condition or medication. Never disregard professional medical advice or delay seeking it because of something you have read or simulated in this software.
+
+### Simulation Limitations
+
+The models implemented in Neuropolygon are **simplified abstractions** of extremely complex biological systems. They are intended to illustrate general principles and cannot capture the full complexity of:
+
+- Real neuronal networks and brain function
+- Individual patient variability (genetics, age, comorbidities, polypharmacy)
+- Complete pharmacokinetics and pharmacodynamics
+- Actual drug efficacy, safety, or side effect profiles
+
+Numerical values (half-lives, Ki values, therapeutic windows, etc.) are approximate and drawn from published literature for teaching purposes. They may be simplified, rounded, or outdated. **Do not rely on them for clinical calculations.**
+
+### No Doctor–Patient Relationship
+
+Use of this software does **not** create a doctor–patient relationship, pharmacist–patient relationship, or any other professional relationship. The authors and contributors are not acting as your healthcare providers.
+
+### Drug Information
+
+Drug names, mechanisms, targets, and interactions are presented in simplified form. Real-world prescribing requires consideration of contraindications, warnings, black box warnings, drug–drug interactions, renal/hepatic function, pregnancy/lactation status, and many other factors not modeled here. **Always consult official prescribing information (e.g., FDA, EMA, or national formulary) before any clinical use.**
+
+### No Warranty
+
+The software is provided "AS IS", without warranty of any kind. The authors make no guarantees regarding accuracy, completeness, reliability, or fitness for any particular purpose. See the [License](#-license) section for full terms.
+
+### Limitation of Liability
+
+In no event shall the authors, contributors, or copyright holders be liable for any claim, damages, or other liability — whether in an action of contract, tort, or otherwise — arising from, out of, or in connection with the software or the use or other dealings in the software. This includes, without limitation, any harm arising from reliance on simulated results for real-world decisions.
+
+### Emergency
+
+**If you are experiencing a medical emergency, call your local emergency number immediately** (e.g., 112 in the EU, 911 in the US, 103 in Russia). Do not rely on this software.
+
+### Educational Use Only
+
+This tool is intended for students, educators, researchers, and curious minds who wish to explore neuropharmacology concepts in a safe, interactive environment. It is **not** a substitute for formal training in medicine, pharmacology, or neuroscience.
+
+**By using Neuropolygon 4.0, you acknowledge that you have read, understood, and agreed to this disclaimer.**
+
+---
+выдай полную
+markdown
 # 🧠 Neuropolygon 4.0 — Interactive Neuropharmacology Simulator
 
 > An interactive, browser-based sandbox for neuroscience and pharmacology education.
@@ -25,8 +84,8 @@
 - [Architecture](#-architecture)
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
-- [Disclaimer](#-disclaimer)
 - [License](#-license)
+- [Disclaimer](#️-disclaimer)
 - [Acknowledgments](#-acknowledgments)
 
 ---
@@ -487,6 +546,57 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 For licensing inquiries, please open an issue on GitHub.
 
+## ⚠️ Disclaimer
+Neuropolygon 4.0 is an educational simulator, not a medical device.
+
+Not Medical Advice
+The content, simulations, drug data, patient scenarios, and all other materials provided by this software are for educational and informational purposes only. They do NOT constitute medical advice, diagnosis, treatment recommendations, or professional guidance of any kind.
+
+Do not use this software to:
+
+❌ Diagnose, treat, or manage any medical condition
+
+❌ Make clinical decisions for yourself or others
+
+❌ Prescribe, adjust, or discontinue any medication
+
+❌ Replace consultation with a qualified healthcare professional
+
+Always seek the advice of a physician or other qualified healthcare provider with any questions regarding a medical condition or medication. Never disregard professional medical advice or delay seeking it because of something you have read or simulated in this software.
+
+Simulation Limitations
+The models implemented in Neuropolygon are simplified abstractions of extremely complex biological systems. They are intended to illustrate general principles and cannot capture the full complexity of:
+
+Real neuronal networks and brain function
+
+Individual patient variability (genetics, age, comorbidities, polypharmacy)
+
+Complete pharmacokinetics and pharmacodynamics
+
+Actual drug efficacy, safety, or side effect profiles
+
+Numerical values (half-lives, Ki values, therapeutic windows, etc.) are approximate and drawn from published literature for teaching purposes. They may be simplified, rounded, or outdated. Do not rely on them for clinical calculations.
+
+No Doctor–Patient Relationship
+Use of this software does not create a doctor–patient relationship, pharmacist–patient relationship, or any other professional relationship. The authors and contributors are not acting as your healthcare providers.
+
+Drug Information
+Drug names, mechanisms, targets, and interactions are presented in simplified form. Real-world prescribing requires consideration of contraindications, warnings, black box warnings, drug–drug interactions, renal/hepatic function, pregnancy/lactation status, and many other factors not modeled here. Always consult official prescribing information (e.g., FDA, EMA, or national formulary) before any clinical use.
+
+No Warranty
+The software is provided "AS IS", without warranty of any kind. The authors make no guarantees regarding accuracy, completeness, reliability, or fitness for any particular purpose. See the License section for full terms.
+
+Limitation of Liability
+In no event shall the authors, contributors, or copyright holders be liable for any claim, damages, or other liability — whether in an action of contract, tort, or otherwise — arising from, out of, or in connection with the software or the use or other dealings in the software. This includes, without limitation, any harm arising from reliance on simulated results for real-world decisions.
+
+Emergency
+If you are experiencing a medical emergency, call your local emergency number immediately (e.g., 112 in the EU, 911 in the US, 103 in Russia). Do not rely on this software.
+
+Educational Use Only
+This tool is intended for students, educators, researchers, and curious minds who wish to explore neuropharmacology concepts in a safe, interactive environment. It is not a substitute for formal training in medicine, pharmacology, or neuroscience.
+
+By using Neuropolygon 4.0, you acknowledge that you have read, understood, and agreed to this disclaimer.
+
 🙏 Acknowledgments
 NiiVue — for the excellent WebGL MRI viewer
 
@@ -498,63 +608,6 @@ The open neuroscience community — for inspiration and feedback
 
 Everyone who has ever tried to teach or learn neuropharmacology — this is for you
 
----
-
-## Disclaimer
-
-**Neuropolygon 4.0 is an educational simulator, not a medical device.**
-
-### Not Medical Advice
-
-The content, simulations, drug data, patient scenarios, and all other materials provided by this software are for **educational and informational purposes only**. They do **NOT** constitute medical advice, diagnosis, treatment recommendations, or professional guidance of any kind.
-
-**Do not use this software to:**
-
-- ❌ Diagnose, treat, or manage any medical condition
-- ❌ Make clinical decisions for yourself or others
-- ❌ Prescribe, adjust, or discontinue any medication
-- ❌ Replace consultation with a qualified healthcare professional
-
-Always seek the advice of a physician or other qualified healthcare provider with any questions regarding a medical condition or medication. Never disregard professional medical advice or delay seeking it because of something you have read or simulated in this software.
-
-### Simulation Limitations
-
-The models implemented in Neuropolygon are **simplified abstractions** of extremely complex biological systems. They are intended to illustrate general principles and cannot capture the full complexity of:
-
-- Real neuronal networks and brain function
-- Individual patient variability (genetics, age, comorbidities, polypharmacy)
-- Complete pharmacokinetics and pharmacodynamics
-- Actual drug efficacy, safety, or side effect profiles
-
-Numerical values (half-lives, Ki values, therapeutic windows, etc.) are approximate and drawn from published literature for teaching purposes. They may be simplified, rounded, or outdated. **Do not rely on them for clinical calculations.**
-
-### No Doctor–Patient Relationship
-
-Use of this software does **not** create a doctor–patient relationship, pharmacist–patient relationship, or any other professional relationship. The authors and contributors are not acting as your healthcare providers.
-
-### Drug Information
-
-Drug names, mechanisms, targets, and interactions are presented in simplified form. Real-world prescribing requires consideration of contraindications, warnings, black box warnings, drug–drug interactions, renal/hepatic function, pregnancy/lactation status, and many other factors not modeled here. **Always consult official prescribing information (e.g., FDA, EMA, or national formulary) before any clinical use.**
-
-### No Warranty
-
-The software is provided "AS IS", without warranty of any kind. The authors make no guarantees regarding accuracy, completeness, reliability, or fitness for any particular purpose. See the [License](#-license) section for full terms.
-
-### Limitation of Liability
-
-In no event shall the authors, contributors, or copyright holders be liable for any claim, damages, or other liability — whether in an action of contract, tort, or otherwise — arising from, out of, or in connection with the software or the use or other dealings in the software. This includes, without limitation, any harm arising from reliance on simulated results for real-world decisions.
-
-### Emergency
-
-**If you are experiencing a medical emergency, call your local emergency number immediately** (e.g., 112 in the EU, 911 in the US, 103 in Russia). Do not rely on this software.
-
-### Educational Use Only
-
-This tool is intended for students, educators, researchers, and curious minds who wish to explore neuropharmacology concepts in a safe, interactive environment. It is **not** a substitute for formal training in medicine, pharmacology, or neuroscience.
-
-**By using Neuropolygon 4.0, you acknowledge that you have read, understood, and agreed to this disclaimer.**
-
----
 📬 Contact
 GitHub Issues — for bugs, feature requests, and scientific corrections
 
